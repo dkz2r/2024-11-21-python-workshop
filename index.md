@@ -81,7 +81,7 @@ displayed if the 'eventbrite' field in the header is not set.
   src="https://cryptpad.fr/form/#/2/form/view/EwekXMW26ZA8gW1n-k-np2trHTG4oC+G-K9XyZ8R5+Y/embed/"
   frameborder="0"
   width="100%"
-  height="280px"
+  height="800px"
   scrolling="auto">
 </iframe>
 
