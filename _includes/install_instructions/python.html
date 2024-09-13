@@ -11,16 +11,25 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
   <p>
     <a href="https://python.org">Python</a> is a popular language for
     research computing, and great for general-purpose programming as
-    well.  Installing all of its research packages individually can be
-    a bit difficult, so we recommend
-    <a href="https://www.anaconda.com/download/success">Anaconda</a>,
-    an all-in-one installer.
+    well. Python at it's core contains a number of useful libraries
+    that are used in most scientific applications, however there are
+    a number of third party libraries that are provided free of charge
+    that can be used to extend the functionality of Python. We will
+    cover the installation and use of these libraries in the workshop.
   </p>
 
   <p>
     Regardless of how you choose to install it,
     <strong>please make sure you install Python version 3.x</strong>
-    (e.g., 3.6 is fine).
+    (e.g., "3.6.1" or "3.11.6" is fine).
+  </p>
+
+  <p>
+    You can check if you have a working installation by opening a
+    command line (on Windows), or terminal (on macOS and Linux) and
+    typing <code>python --version</code> or <code>python3 --version</code>, then pressing
+    <kbd>Enter</kbd>. You should see something like <code>Python 3.12.6</code> appear in the
+    console window.
   </p>
 
   {% comment %}
@@ -47,10 +56,22 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
 
     <div class="tab-content">
       <article role="tabpanel" class="tab-pane active" id="python-windows">
+        To install Python on a Windows machine, follow these steps:
         <ol>
-          <li>Open <a href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a> with your web browser.</li>
-          <li>Download the Anaconda for Windows installer with Python 3. (If you are not sure which version to choose, you probably want the 64-bit Graphical Installer <em>Anaconda3-...-Windows-x86_64.exe</em>)</li>
-          <li>Install Python 3 by running the Anaconda Installer, using all of the defaults for installation <em>except</em> make sure to check <strong>Add Anaconda to my PATH environment variable</strong>.</li>
+          <li>Open <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> with your web browser.</li>
+          <li>Click on the large yellow button that says "Download Python 3.XX.XX" (the actual version will depend on the most recent release)</li>
+          <li>A short download should begin.</li>
+          <li>Once the installer is downloaded, run the installer by double-clicking it.</li>
+          <li>Make sure the following options are selected:</li>
+          <ul>
+            <li>Install launcher for all users (recommended)</li>
+            <li>"Add Python to PATH"</li>
+            <li>(Optional Features) pip</li>
+          </ul>
+          <li>Verify the installation by opening a command prompt and typing <code>python --version</code>.</li>
+          <ul>
+            <li>If you see a version number like <code>Python 3.12.6</code>, then you are ready for the workshop!</li>
+          </ul>
         </ol>
 
         <!--
