@@ -88,9 +88,12 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
       </article>
       <article role="tabpanel" class="tab-pane" id="python-macos">
         <ol>
-          <li>Open <a href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a> with your web browser.</li>
-          <li>Download the Anaconda Installer with Python 3 for macOS (you can either use the Graphical or the Command Line Installer).</li>
-          <li>Install Python 3 by running the Anaconda Installer using all of the defaults for installation.</li>
+          <li>Open <a href="https://www.python.org/downloads/">https://www.python.org/downloads/</a> with your web browser.</li>
+          <li>Download the Python installer for macOS.</li>
+          <li>Run the downloaded installer.</li>
+          <li>Make sure to check the box that says "Add Python to PATH" and ensure that pip is included in the installation.</li>
+          <li>Follow the remaining installation instructions provided by the installer.</li>
+          <li>Verify the installation by opening a terminal and typing <code>python3 --version</code> and <code>pip3 --version</code>.</li>
         </ol>
 
         <h4>Video Tutorial</h4>
@@ -107,38 +110,28 @@ https://jupyter-notebook.readthedocs.io/en/stable/notebook.html#browser-compatib
       </article>
       <article role="tabpanel" class="tab-pane" id="python-linux">
         <ol>
-          <li>Open <a href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a> with your web browser.</li>
-          <li>Download the Anaconda Installer with Python 3 for Linux.<br>
-            (The installation requires using the shell. If you aren't
-            comfortable doing the installation yourself
-            stop here and request help at the workshop.)
-          </li>
-          <li>
-            Open a terminal window and navigate to the directory where
-            the executable is downloaded (e.g., `cd ~/Downloads`).
-          </li>
-          <li>
-            Type <pre>bash Anaconda3-</pre> and then press
-            <kbd>Tab</kbd> to autocomplete the full file name. The name of
-            file you just downloaded should appear.
-          </li>
-          <li>
-            Press <kbd>Enter</kbd>
-            (or <kbd>Return</kbd> depending on your keyboard).
-            You will follow the text-only prompts.
-            To move through the text, press <kbd>Spacebar</kbd>.
-            Type <code>yes</code> and press enter to approve the license.
-            Press <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to approve the default location
-            for the files.
-            Type <code>yes</code> and press
-            <kbd>Enter</kbd> (or <kbd>Return</kbd>)
-            to prepend Anaconda to your <code>PATH</code>
-            (this makes the Anaconda distribution the default Python).
-          </li>
-          <li>
-            Close the terminal window.
-          </li>
+          <li>Open <a href="https://www.python.org/downloads/source/">https://www.python.org/downloads/source/</a> with your web browser.</li>
+          <li>Select the link at the top which reads "Latest Python3 Release - Python 3.XX.XX" (The actual version will depend on the most recent release)</li>
+          <li>Scroll to the "Files" section on the next page, and download the "Gzipped source tarball"</li>
+          <li>Open a terminal window and navigate to the directory where the file is downloaded (e.g., <code>cd ~/Downloads</code>).</li>
+          <li>Extract the file with the command <code>tar -xvzf Python-{version}.tgz</code> (where {version} is the actual version number downloaded)</li>
+          <li>Change to the extracted directory with the command <code>cd Python-{version}</code></li>
+          <li>Run the following commands to compile and install Python:</li>
+          <ul>
+            <li>
+              <code>
+                ./configure <br>
+                &nbsp;&nbsp;--prefix=/opt/python/${PYTHON_VERSION} <br>
+                &nbsp;&nbsp;--enable-shared <br>
+                &nbsp;&nbsp;--enable-optimizations <br>
+                &nbsp;&nbsp;--enable-ipv6 <br>
+                &nbsp;&nbsp;LDFLAGS=-Wl,-rpath=/opt/python/${PYTHON_VERSION}/lib,--disable-new-dtags
+              </code>
+            </li>
+            <li><code>make</code></li>
+            <li><code>sudo make install</code></li>
+          </ul>
+          <li>Verify the installation by opening a terminal and typing <code>python3 --version</code> and <code>pip3 --version</code>.</li>
         </ol>
       </article>
     </div>
