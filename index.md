@@ -78,7 +78,7 @@ displayed if the 'eventbrite' field in the header is not set.
 <strong>Some adblockers block the registration window. If you do not see the
   registration box below, please check your adblocker settings.</strong>
 <iframe
-  src="https://cryptpad.fr/form/#/2/form/view/EwekXMW26ZA8gW1n-k-np2trHTG4oC+G-K9XyZ8R5+Y/embed/"
+  src="https://cryptpad.fr/form/#/2/form/view/FbY+MgetkGdBkRl40Y1x0Im0Kv-f8uZzMbnD2xSn5vs/embed/"
   frameborder="0"
   width="100%"
   height="800px"
